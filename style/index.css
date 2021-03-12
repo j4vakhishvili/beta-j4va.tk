@@ -6,6 +6,7 @@
     margin: 0;
     font-family: Arial;
     font-size: 17px;
+    cursor: url(cursors/mouse.png), pointer;
   }
   
   #myVideo {
@@ -36,7 +37,7 @@
     border: none;
     background: linear-gradient(120deg, rgba(240, 190, 4, 1), rgba(237, 2, 50, 1)) ;
     color: #fff;
-    cursor: pointer;
+    cursor: url(cursors/smooth-x.png), pointer;
     float: right;
   }
   
@@ -79,9 +80,22 @@
     width: 200px;
     margin-top: 160px;
     padding: 30px;
-    background: rgb(190, 0, 248);
-    animation: rgb 2s linear infinite;
-    box-shadow: 0px 15px black;
+    background: rgb(0, 0, 0);
+    border-bottom: 20px solid;
+    border-image: conic-gradient(from var(--angle), red, yellow, lime, aqua, blue, magenta, red) 1;
+	  animation: 4s rgb linear infinite;
+  }
+
+  @keyframes rgb {
+    to {
+      --angle: 360deg;
+    }
+  }
+  
+  @property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
   }
 
   .loading {
@@ -94,20 +108,11 @@
     border-radius: 0px;
   }
 
-  @keyframes rgb{
-    0%{
-      filter: hue-rotate(0deg);
-    }
-    100%{
-      filter: hue-rotate(360deg);
-    }
-  }
-
   .darkmode{
     background: rgb(249 249 249 / 45%);
     border: none;
     border-radius: 10px;
-    cursor: pointer;
+    cursor: url(cursors/smooth-x.png), pointer;
     color: #1b1b1b;;
     font-family: 'mcgeo';
     padding: 10px;
