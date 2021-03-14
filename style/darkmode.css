@@ -7,6 +7,15 @@
     filter:invert(0%);
   }
 
+  /**body{
+    color: black;
+    background: #EFEFED;
+  }
+
+  body.dark-mode{
+    color: #EFEFED;
+    background: #121212;
+  }**/
 
   .light-mode{
     background: rgba(255, 255, 255, 0.856);
@@ -51,4 +60,13 @@
         background: rgb(249 249 249 / 45%);
         color: #1b1b1b;
       }
+      /**body{
+        color: black;
+        background: #EFEFED;
+      }
+    
+      body.light-mode{
+        color: #EFEFED;
+        background: #121212;
+      }**/
   }
