@@ -7,7 +7,7 @@
     filter:invert(0%);
   }
 
-  /**body{
+  body{
     color: black;
     background: #EFEFED;
   }
@@ -15,7 +15,7 @@
   body.dark-mode{
     color: #EFEFED;
     background: #121212;
-  }**/
+  }
 
   .light-mode{
     background: rgba(255, 255, 255, 0.856);
@@ -60,13 +60,25 @@
         background: rgb(249 249 249 / 45%);
         color: #1b1b1b;
       }
-      /**body{
-        color: black;
-        background: #EFEFED;
-      }
-    
-      body.light-mode{
-        color: #EFEFED;
-        background: #121212;
-      }**/
+  }
+
+  body {
+    color: rgb(0, 0, 0);
+    background-color: #fff;
+  }
+  body.dark-mode {
+    color: #eee;
+    background-color: #121212;
+  }
+  
+  @media (prefers-color-scheme: dark) {
+    /* defaults to dark theme */
+    body {
+      color: #eee;
+      background-color: #121212;
+    }
+    body.light-mode {
+      color: #222;
+      background-color: #fff;
+    }
   }
